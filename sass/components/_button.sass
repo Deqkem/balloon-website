@@ -1,0 +1,39 @@
+// Компонент кнопка
+.btn
+    &:link, &:visited
+        @include link-style($color-grey)
+        font-weight: 600
+        font-size: 2rem
+        line-height: 2.4rem
+        letter-spacing: .5rem
+        padding: 1.5rem 4rem
+        background: $color-white
+        border-radius: 5rem
+        transition: all .3s
+        position: relative
+    &:hover
+        transform: translateY(-.4rem)
+        box-shadow: $box-shadow-1
+        // .btn:hover::after
+        &::after
+            transform: scaleX(1.5) scaleY(1.7)
+            opacity: 0
+    &:active
+        transform: translateY(-.2rem)
+        box-shadow: $box-shadow-2
+    &::after
+        content: ""
+        background: $color-white
+        height: 100%
+        width: 100%
+        border-radius: 5rem
+        display: inline-block
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        transition:  all .4s
+    &_animated
+        animation: btnToUp .5s ease-out .7s
+        animation-fill-mode: backwards
+        backface-visibility: hidden
