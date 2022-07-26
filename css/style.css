@@ -666,6 +666,37 @@ body {
   display: inline-block;
 }
 
+.card-tour {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  height: 50rem;
+  position: relative;
+}
+.card-tour__side {
+  height: 50rem;
+  transition: all 0.7s ease-out;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.card-tour__side_front {
+  background: green;
+}
+.card-tour__side_back {
+  transform: rotateY(180deg);
+  background: linear-gradient(120deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+}
+.card-tour:hover .card-tour__side_front {
+  transform: rotateY(180deg);
+}
+.card-tour:hover .card-tour__side_back {
+  transform: rotateY(0deg);
+}
+
 .header {
   height: 95vh;
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url(../img/header-background.jpg) center/cover no-repeat;
@@ -741,8 +772,6 @@ body {
 .section-adventure {
   padding: 21rem 0;
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url(../img/third-section-background.jpg) center/cover no-repeat;
-  transform: skewY(7deg);
-}
-.section-adventure > * {
-  transform: skewY(-7deg);
+  -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+          clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
 }/*# sourceMappingURL=style.css.map */
