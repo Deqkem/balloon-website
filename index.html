@@ -12,6 +12,25 @@
 </head>
 <body>
     <div class="container">
+
+        <!-- Навигационное меню -->
+        <div class="navigation">
+            <input type="checkbox" class="navigation__toggle" id="nav-toggle">
+            <label for="nav-toggle" class="navigation__button">
+                <span class="navigation__icon"></span>
+            </label>
+            <div class="navigation__background"></div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">О НАС</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">СКИДКИ</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">ЛУЧШИЕ туры</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">КАЛЬКУЛЯТОР ЦЕНЫ</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">СВЯЗАТЬСЯ С НАМИ</a></li>
+                </ul>
+            </nav>
+        </div>
+
         <!-- Первая секция Header  -->
         <header class="header">
             <img src="icons/Icon-logo.svg" alt="Логотип воздушный шар" class="header__logo">
@@ -218,6 +237,12 @@
 
             <!-- Пятая секция -->
             <section class="section-feedback">
+                <!-- Фоновое видео с градиентом -->
+                <div class="bg-gradient"></div>
+                <video class="bg-video" autoplay muted loop>
+                    <source src="img/balloons.mp4">
+                    <source src="img/balloons.webm">
+                </video>
                 <!-- Заголовок -->
                 <div class="text-align-center margin-bottom-80px">
                     <h2 class="title-secondary title-secondary_white">
@@ -263,7 +288,72 @@
                 </div>
             </section>
 
+            <!-- Шестая секция -->
+            <section class="section-book">
+                <div class="row">
+                    <div class="book">
+                        <div class="book__form">
+                            <form action="#" class="form">
+                                <!-- Заголовок -->
+                                <div class="text-align-center margin-bottom-30px">
+                                    <h2 class="title-secondary">
+                                        ЗАБРОНИРОВАТЬ ТУР
+                                    </h2>
+                                </div>
+                                <!-- Имя и Фамилия -->
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="Имя Фамилия" id="name" required>
+                                    <label for="name" class="form__label">Ваше Имя и Фамилия</label>
+                                </div>
+                                <!-- Почта -->
+                                <div class="form__group">
+                                    <input type="email" class="form__input" placeholder="Ваш email" id="email" required>
+                                    <label for="email" class="form__label">Ваш email</label>
+                                </div>
+                                <!-- Радиобаттоны выбора тура -->
+                                <div class="form__group">
+                                    <div class="form__group-radio">
+                                        <input type="radio" class="form__input-radio" id="tour-1" name="checked">
+                                        <label for="tour-1" class="form__label-radio">
+                                            <span class="form__button-radio"></span> Групповой тур
+                                        </label>
+                                    </div>
+                                    <div class="form__group-radio">
+                                        <input type="radio" class="form__input-radio" id="tour-2" name="checked">
+                                        <label for="tour-2" class="form__label-radio">
+                                            <span class="form__button-radio"></span>Индивидуальный тур
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Кнопка -->
+                                <div class="form__group">
+                                    <button class="btn btn_brown">ЗАБРОНИРОВАТЬ</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="row text-align-center">
+                <a href="#">
+                    <img src="icons/Icon-logo.svg" alt="logo" class="footer__logo">
+                </a>
+            </div>
+            <div class="row">
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">О НАС</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">СКИДКИ</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">ЛУЧШИЕ ТУРЫ</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">КАЛЬКУЛЯТОР ЦЕНЫ</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">СВЯЗАТЬСЯ С НАМИ</a></li>
+                </ul>
+            </div>
+        </footer>
     </div>
 
 
