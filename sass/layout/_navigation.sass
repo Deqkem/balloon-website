@@ -12,6 +12,7 @@
         z-index: 22
         text-align: center
         cursor: pointer
+        box-shadow: $box-shadow-1
     &__background
         width: 6rem
         height: 6rem
@@ -60,6 +61,7 @@
             background-position: 100%
             color: $color-brown-dark
             transform: translateX(1rem)
+            backface-visibility: hidden
     &__toggle:checked ~ &__background
         transform: scale(90)
     &__toggle:checked ~ &__nav
