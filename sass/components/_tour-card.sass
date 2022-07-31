@@ -3,7 +3,7 @@
     -moz-perspective: 150rem
     height: 50rem
     position: relative
-    @include respond(tab-port)
+    @media only screen and (max-width: 900px), (hover: none)
         height: auto
 
     &__side
@@ -19,16 +19,16 @@
         box-shadow: $box-shadow-1
         border-radius: .3rem
         overflow: hidden
-        @include respond(tab-port)
+        @media only screen and (max-width: 900px), (hover: none)
             height: auto
             position: relative
         &_front
-            @include respond(tab-port)
+            @media only screen and (max-width: 900px), (hover: none)
                 padding-bottom: 13rem
         &_back
             transform: rotateY(180deg)
             background: linear-gradient(120deg, $color-brown-light, $color-brown-dark)
-            @include respond(tab-port)
+            @media only screen and (max-width: 900px), (hover: none)
                 transform: rotateY(0deg)
                 padding: 5rem
                 padding-top: 12rem
@@ -36,7 +36,7 @@
                 clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%)
     &:hover &__side_front
         transform: rotateY(-180deg)
-        @include respond(tab-port)
+        @media only screen and (max-width: 900px), (hover: none)
             transform: rotateY(0deg)
     &:hover &__side_back
         transform: rotateY(0deg)
@@ -44,6 +44,7 @@
         height: 24.5rem
         background-blend-mode: hard-light
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+        // @media only screen and (max-width: 900px), (hover: none)
         @include respond(tab-port)
             height: 30rem
         &_1
@@ -62,6 +63,7 @@
         position: absolute
         top: 19rem
         right: 0rem
+        // @media only screen and (max-width: 900px), (hover: none)\
         @include respond(tab-port)
             top: 25rem
             font-size: 3.8rem
@@ -74,6 +76,7 @@
             right: 0rem
             top: 3.2rem
             padding-bottom: 1rem
+            // @media only screen and (max-width: 900px), (hover: none)
             @include respond(tab-port)
                 top: 4.4rem
     &__descr
@@ -93,6 +96,7 @@
                     margin-bottom: 2rem
                 @include respond(tab-land)
                     font-size: 1.5rem
+                // @media only screen and (max-width: 900px), (hover: none)
                 @include respond(tab-port)
                     font-size: 2rem
     &__backSide-box
@@ -100,7 +104,7 @@
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
-        @include respond(tab-port)
+        @media only screen and (max-width: 900px), (hover: none)
             position: relative
             top: 0%
             left: 0%
